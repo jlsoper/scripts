@@ -1,10 +1,17 @@
 #!/bin/sh
 
 
-# OSX Dock -  Finder (icon view)
-# OSX      -  ./Contents/Resources/ApplicationStub.icns (overwrite icon file)
+: '
 
-# $HOME/scripts/automator/vsc.sh
+OSX
+------------
 
-sh -c "/Applications/VSCodium.app/Contents/Resources/app/bin/codium  --extensions-dir \$HOME/Library/Application\ Support/vscode/extensions --user-data-dir \$HOME/Library/Application\ Support/vscode/user-data"
+OSX Dock -  Finder (icon view)
+OSX      -  ./Contents/Resources/ApplicationStub.icns (overwrite icon file)
+
+
+'
+
+
+sh -c "/Applications/VSCodium.app/Contents/Resources/app/bin/codium  --extensions-dir \$HOME/.config/vscode/extensions --user-data-dir \$HOME/.config/vscode/user-data"
 
