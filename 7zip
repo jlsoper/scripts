@@ -21,7 +21,7 @@ echo
 
 echo -n "Folder to archive: " ; read folderName
 echo
-echo -n "Name of archive (.7Z) : "   ; read fileName
+echo -n "Name of archive (.7Z): " ; read fileName
 
 
 if [ -d "$folderName" ] && [ -n "$fileName" ]

@@ -19,7 +19,7 @@ echo "7unzip Program"
 echo "--------------"
 echo
 
-echo -n "Name of archive to extract (.7Z) : " ; read fileName
+echo -n "Name of archive to extract (.7Z): " ; read fileName
 
 
 if [ -f "$fileName".7Z ]
