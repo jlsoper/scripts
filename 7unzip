@@ -1,0 +1,38 @@
+#!/bin/bash
+
+
+echo
+
+: '
+//////////
+
+
+7unzip()   { if [ -n "$1" ]; then 7z x -t7Z $1 -o. ; else echo "usage: $FUNCNAME <archive.7Z>" ; fi }
+
+
+
+
+//////////
+'
+
+echo "7unzip Program"
+echo "--------------"
+echo
+
+echo -n "Name of archive to extract (.7Z) : " ; read fileName
+
+
+if [ -f "$fileName".7Z ]
+then
+  7z x -t7Z "$fileName".7Z -o.
+
+else
+  echo
+  echo "Invalid File Name.."
+  echo
+
+  exit 1
+
+fi
+
+

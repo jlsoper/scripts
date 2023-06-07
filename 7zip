@@ -1,0 +1,40 @@
+#!/bin/bash
+
+
+echo
+
+: '
+//////////
+
+
+alias 7zip='7z a -t7Z'  # *.7Z
+
+
+
+
+//////////
+'
+
+echo "7zip Program"
+echo "------------"
+echo
+
+echo -n "Folder to archive: " ; read folderName
+echo
+echo -n "Name of archive (.7Z) : "   ; read fileName
+
+
+if [ -d "$folderName" ] && [ -n "$fileName" ]
+then
+  7z a -t7Z "$fileName".7Z  "$folderName"
+
+else
+  echo
+  echo "Invalid input, exiting.."
+  echo
+
+  exit 1
+
+fi
+
+
