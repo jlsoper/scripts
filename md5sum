@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+: '
+//////////
+
+
+md5sum - check MD5 message digest
+
+
+//////////
+'
+
+
+if [ -n "$1" ]
+then
+  file1="$1"
+  file2="${file1%.*}"
+
+  str1=`cut -d' ' -f1 $file1`
+  str2=`md5 -q $file2`
+
+  if [ $str1 != $str2 ]
+  then
+    echo "WARNING: checksums do NOT Match"
+  else
+    echo "$file2": "OK"
+  fi
+
+else
+  echo "usage:" $(basename $0) "<file.md5>"
+
+fi
+
