@@ -1,15 +1,15 @@
 #!/bin/bash
 
 
+########################################
 : '
-//////////
 
 
-md5sum - check MD5 message digest
+/sbin/md5
 
 
-//////////
 '
+########################################
 
 
 if [ -n "$1" ]
@@ -18,7 +18,8 @@ then
   file2="${file1%.*}"
 
   str1=`cut -d' ' -f1 $file1`
-  str2=`md5 -q $file2`
+  str2=`/sbin/md5 -q  $file2`
+
 
   if [ $str1 != $str2 ]
   then
