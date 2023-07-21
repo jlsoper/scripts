@@ -1,17 +1,13 @@
 #!/bin/ash
 
 
-: '
-//////////
-
-
-countNumberParams.sh "one two three" four five
-
-
-
-
-//////////
-'
+####################################
+#
+#
+#  countNumberParams.sh "one two three" four five
+#
+#
+####################################
 
 
 echo -n "Input your first name: " ; read fname

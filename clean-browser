@@ -1,0 +1,51 @@
+#!/bin/ash
+
+
+####################################
+#
+#
+#  rm -rf ~/.config/chromium  ~/.cache/chromium
+#
+#  rm -rf ~/.mozilla          ~/.cache/mozilla
+#
+#  rm -rf ~/.thunderbird      ~/.cache/thunderbird
+#
+#
+####################################
+
+
+echo
+
+echo "Clean up Web App"
+echo "----------------"
+echo
+
+echo -n "Select App to clean: (1 = chromium, 2 = firefox, 3 = thunderbird): " ; read selection
+
+
+case $selection in
+
+  1)
+    echo "chromium (cleaned)"
+    rm -rf ~/.config/chromium  ~/.cache/chromium
+    ;;
+
+  2)
+    echo "firefox (cleaned)"
+    rm -rf ~/.mozilla  ~/.cache/mozilla
+    ;;
+
+  3)
+    echo "thunderbird (cleaned)"
+    rm -rf ~/.thunderbird  ~/.cache/thunderbird
+    ;;
+
+  *)
+    echo
+    echo "Invalid input, exiting.."
+    echo
+    exit 1
+    ;;
+esac
+
+

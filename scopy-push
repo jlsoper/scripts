@@ -1,16 +1,14 @@
 #!/bin/ash
 
 
-: '
-//////////
-
-
+####################################
+#
+#
 #  scp <source-file> user@host:<path>
 #  scp user@host:<path of source file> <local target for file>
-
-
-//////////
-'
+#
+#
+####################################
 
 
 if [ -n "$4" ]
@@ -21,5 +19,4 @@ else
   echo "usage:" $(basename $0) "<source-file> <user> <host> <path>"
 
 fi
-
 
