@@ -1,19 +1,16 @@
 #!/bin/bash
 
 
+####################################
+#
+#
+#  read -r  # Backslash does not act as an escape character
+#
+#
+####################################
+
+
 echo
-
-: '
-//////////
-
-
- read -r  # Backslash does not act as an escape character
-
-
-//////////
-'
-
-
 echo
 
 echo -n "Enter string with '/' or '\' : " ; read -r s

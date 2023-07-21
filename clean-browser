@@ -1,21 +1,20 @@
 #!/bin/bash
 
 
+####################################
+#
+#
+#  rm -rf ~/.config/chromium  ~/.cache/chromium
+#
+#  rm -rf ~/.mozilla          ~/.cache/mozilla
+#
+#  rm -rf ~/.thunderbird      ~/.cache/thunderbird
+#
+#
+####################################
+
+
 echo
-
-: '
-//////////
-
-
-rm -rf ~/.config/chromium  ~/.cache/chromium
-
-rm -rf ~/.mozilla          ~/.cache/mozilla
-
-rm -rf ~/.thunderbird      ~/.cache/thunderbird
-
-
-//////////
-'
 
 echo "Clean up Web App"
 echo "----------------"
