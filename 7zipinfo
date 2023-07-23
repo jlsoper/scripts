@@ -1,0 +1,35 @@
+#!/bin/bash
+
+
+####################################
+#
+#
+#  7z l
+#
+#
+####################################
+
+
+echo
+
+echo "7zip Program"
+echo "------------"
+echo
+
+echo -n "Name of archive to show info (.7Z): " ; read fileName
+
+
+if [ -f "$fileName".7Z ]
+then
+  7z l "$fileName".7Z
+
+else
+  echo
+  echo "Invalid File Name.."
+  echo
+
+  exit 1
+
+fi
+
+
