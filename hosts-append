@@ -1,0 +1,34 @@
+#!/bin/ash
+
+
+####################################
+#
+#
+#  C:/Windows/System32/drivers/etc/hosts
+#
+#
+####################################
+
+
+echo
+
+echo "Append to hosts file"
+echo "--------------------"
+echo
+
+echo -n "Enter IP address of remote PC: " ; read ipAddress
+echo
+echo -n "Enter name of remote PC: " ; read name
+
+
+/bin/cp  /etc/hosts  /tmp/hosts.txt
+
+echo -e "\n"                      >>  /tmp/hosts.txt
+echo    "###----------"           >>  /tmp/hosts.txt
+echo    "$ipAddress       $name"  >>  /tmp/hosts.txt
+echo    "###----------"           >>  /tmp/hosts.txt
+
+echo
+
+doas cp /tmp/hosts.txt  /etc/hosts
+
