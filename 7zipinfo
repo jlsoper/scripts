@@ -16,12 +16,12 @@ echo "7zip Program"
 echo "------------"
 echo
 
-echo -n "Name of archive to show info (.7Z): " ; read fileName
+echo -n "Name of archive to show info (.7z): " ; read fileName
 
 
-if [ -f "$fileName".7Z ]
+if [ -f "$fileName".7z ]
 then
-  7z l "$fileName".7Z
+  7z l "$fileName".7z
 
 else
   echo

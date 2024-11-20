@@ -4,7 +4,7 @@
 ####################################
 #
 #
-#  alias 7zip='7z a -t7Z'  # *.7Z
+#  alias 7zip='7z a -t7z'  # *.7z
 #
 #
 ####################################
@@ -18,12 +18,12 @@ echo
 
 echo -n "Folder to archive: " ; read folderName
 echo
-echo -n "Name of archive (.7Z): " ; read fileName
+echo -n "Name of archive (.7z): " ; read fileName
 
 
 if [ -d "$folderName" ] && [ -n "$fileName" ]
 then
-  7z a -t7Z "$fileName".7Z  "$folderName"
+  7z a -t7z "$fileName".7z  "$folderName"
 
 else
   echo
