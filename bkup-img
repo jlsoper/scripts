@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+####################################
+#
+# read    - chmod 644
+# execute - chmod 755
+#
+#  ${var,,} for lower-case
+#  ${var^^} for upper-case
+#
+#
+#  lsb_release -a;echo "";uname -mrs
+#
+#
+####################################
+
+
+clear
+echo
+
+echo -n "Ready to backup qcow2 & xml files? (y/n): " ; read answer
+echo
+
+if [ "${answer,,}" = "y" ]
+then
+  sudo install -g $USER -o $USER -m 644 /etc/libvirt/qemu/*.xml  /opt/VMachine/backup
+  sudo install -g $USER -o $USER -m 644 /opt/VMachine/*.qcow2    /opt/VMachine/backup
+  echo
+else
+  echo "  aborting backup, exiting.."
+  echo
+fi
+
