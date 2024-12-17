@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+####################################
+#
+#
+#  sudo install -g $USER -o $USER -m 644 /etc/libvirt/qemu/*.xml  /opt/VMachine/backup
+#  sudo install -g $USER -o $USER -m 644 /opt/VMachine/*.qcow2    /opt/VMachine/backup
+#
+#
+####################################
+
+
+if [ -n "$2" ]
+then
+  sudo install -g $USER -o $USER -m 644 "$1" "$2"
+
+else
+  echo "usage:" $(basename $0) "<source-file> <destination-file>"
+
+fi
+
