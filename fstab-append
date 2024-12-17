@@ -36,7 +36,7 @@ echo -n "Enter pass <0>: " ; read pass
 # exit 0
 
 
-#/bin/cp  /etc/fstab  /tmp/fstab.txt
+/bin/cp  /etc/fstab  /tmp/fstab.txt
 
 echo -e "\n"                      >>  /tmp/fstab.txt
 
@@ -46,5 +46,5 @@ echo    "###----------"           >>  /tmp/fstab.txt
 
 echo
 
-# sudo cp /tmp/fstab.txt  /etc/fstab
+sudo cp /tmp/fstab.txt  /etc/fstab
 
