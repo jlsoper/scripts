@@ -46,5 +46,5 @@ echo    "###----------"           >>  /tmp/fstab.txt
 
 echo
 
-sudo cp /tmp/fstab.txt  /etc/fstab
+sudo /bin/cp /tmp/fstab.txt  /etc/fstab
 
