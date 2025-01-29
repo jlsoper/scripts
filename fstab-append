@@ -1,0 +1,50 @@
+#!/bin/ash
+
+
+####################################
+#
+#
+# /etc/fstab
+#
+#
+# <file system>  <mount point>  <type>    <options>    <dump>  <pass>
+# sharedF        /mnt/sharedF   virtiofs  rw,relatime  0       0
+#
+#
+####################################
+
+
+echo
+
+echo "Append to fstab file  [  <file system>  <mount point>  <type>  <options>  <dump>  <pass>  ]"
+echo "--------------------"
+echo
+
+echo -n "Enter file system: " ; read fs
+echo
+echo -n "Enter mount point: " ; read mp
+echo
+echo -n "Enter type: " ; read typ
+echo
+echo -n "Enter options: " ; read opt
+echo
+echo -n "Enter dump <0>: " ; read dump
+echo
+echo -n "Enter pass <0>: " ; read pass
+
+
+# exit 0
+
+
+/bin/cp  /etc/fstab  /tmp/fstab.txt
+
+echo -e "\n"                      >>  /tmp/fstab.txt
+
+echo    "###----------"           >>  /tmp/fstab.txt
+echo    "$fs  $mp  $typ  $opt  $dump  $pass"  >>  /tmp/fstab.txt
+echo    "###----------"           >>  /tmp/fstab.txt
+
+echo
+
+doas /bin/cp /tmp/fstab.txt  /etc/fstab
+

@@ -6,6 +6,8 @@
 #
 #  rm -rf ~/.config/chromium  ~/.cache/chromium
 #
+#  rm -rf ~/.config/BraveSoftware  ~/.cache/BraveSoftware
+#
 #  rm -rf ~/.mozilla          ~/.cache/mozilla
 #
 #  rm -rf ~/.thunderbird      ~/.cache/thunderbird
@@ -20,7 +22,7 @@ echo "Clean up Web App"
 echo "----------------"
 echo
 
-echo -n "Select App to clean: (1 = chromium, 2 = firefox, 3 = thunderbird): " ; read selection
+echo -n "Select App to clean: (1 = chromium, 2 = brave, 3 = firefox, 4 = thunderbird): " ; read selection
 
 
 case $selection in
@@ -31,11 +33,16 @@ case $selection in
     ;;
 
   2)
+    echo "brave-browser (cleaned)"
+    rm -rf ~/.config/BraveSoftware  ~/.cache/BraveSoftware
+    ;;
+
+  3)
     echo "firefox (cleaned)"
     rm -rf ~/.mozilla  ~/.cache/mozilla
     ;;
 
-  3)
+  4)
     echo "thunderbird (cleaned)"
     rm -rf ~/.thunderbird  ~/.cache/thunderbird
     ;;
