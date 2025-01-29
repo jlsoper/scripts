@@ -1,0 +1,42 @@
+#!/bin/bash
+
+
+####################################
+#
+# Check if File Exists
+#
+# -e  check for any     file type
+# -f  check for regular file type
+#
+#
+####################################
+
+
+echo
+
+echo "Write ISO to USB drive"
+echo "----------------------"
+echo
+
+
+echo -n "Name of ISO file (.iso): " ; read fileName
+echo
+
+echo -n "Device name <sd?> : " ; read device
+echo
+
+
+
+if [ -f "$fileName".iso ] && [ -e "/dev/$device" ]
+then
+  sudo dd if="$fileName".iso  of="/dev/$device" bs=4M conv=fdatasync
+
+else
+  echo
+  echo "Invalid File Name or device.."
+  echo
+
+  exit 1
+
+fi
+
