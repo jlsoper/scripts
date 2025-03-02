@@ -8,6 +8,7 @@
 # -e  check for any     file type
 # -f  check for regular file type
 #
+# writes ISO9660 file system, entire device
 #
 ####################################
 
@@ -19,7 +20,7 @@ echo "----------------------"
 echo
 
 
-echo -n "Name of ISO file (.iso): " ; read fileName
+echo -n "Name of ISO file: " ; read fileName
 echo
 
 echo -n "Device name <sd?> : " ; read device
@@ -27,9 +28,9 @@ echo
 
 
 
-if [ -f "$fileName".iso ] && [ -e "/dev/$device" ]
+if [ -f "$fileName" ] && [ -e "/dev/$device" ]
 then
-  sudo dd if="$fileName".iso  of="/dev/$device" bs=4M conv=fdatasync
+  sudo dd if="$fileName"  of="/dev/$device" bs=4M conv=fdatasync
 
 else
   echo
