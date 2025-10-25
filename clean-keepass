@@ -4,6 +4,11 @@
 ####################################
 #
 #
+#  1.  tidy-html         // format html
+#  2.  clean-keepass     // remove password
+#  3.  remove line # 13  //
+#
+#
 #  perl -pi -e 's/password">[^<]*/password">#####/g' "$1"
 #
 #
