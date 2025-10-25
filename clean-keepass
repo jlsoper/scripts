@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+####################################
+#
+#
+#  perl -pi -e 's/password">[^<]*/password">#####/g' "$1"
+#
+#
+####################################
+
+
+script=`basename $0`
+
+
+if [ -n "$1" ]
+then
+  perl -pi -e 's/password">[^<]*/password">#####/g' "$1"
+else
+  echo "usage: $script <file>"
+fi
+
