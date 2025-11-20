@@ -1,0 +1,23 @@
+#!/usr/local/bin/bash
+
+
+####################################
+#
+#  alias open_display='export DISPLAY=:0.0 ; xhost +'
+#
+#
+#  Restart X server after changes
+#
+####################################
+
+
+/bin/cp  /etc/ssh/sshd_config  /tmp/sshd_config.txt
+
+echo -e "\n"                 >>  /tmp/sshd_config.txt
+echo    "X11Forwarding yes"  >>  /tmp/sshd_config.txt
+echo -e "\n"                 >>  /tmp/sshd_config.txt
+
+echo
+
+sudo cp /tmp/sshd_config.txt  /etc/ssh/sshd_config
+
